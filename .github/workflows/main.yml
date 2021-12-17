@@ -22,3 +22,4 @@ jobs:
                   function_name: ec2-start-stop
                   zip_file: aws-scripts/deployment.zip
                   handler: ec2-start-stop.handler
+                  publish: true
