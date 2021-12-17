@@ -4,7 +4,9 @@ exports.handler = (event, context, callback) => {
     event.instanceId.forEach((id) => {
         ec2.startInstances({ InstanceIds: [id] })
             .promise()
-            .then(() => callback(null, `Successfully Started ${id}`))
+            .then(() =>
+                callback(null, `Successfully Started ${id} EC2 Instance`)
+            )
             .catch((err) => callback(err));
     });
 };
